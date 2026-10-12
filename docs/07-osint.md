@@ -18,7 +18,7 @@ Las tres IPs analizadas en los casos de estudio:
 
 | Dato | IP-ADB-01 | IP-DIO-01 | IP-COW-01 |
 |---|---|---|---|
-| Estado del escaneo en la captura | FINISHED | RUNNING | RUNNING |
+| Estado del escaneo en la captura | FINISHED | FINISHED | FINISHED |
 | Data elements únicos | 14 | 1.046 | 604 |
 | BGP AS Membership · Netblock Membership | 1 · 1 | 1 · 1 | 1 · 1 |
 | Blacklisted IP Address | 1 | 2 | 2 |
