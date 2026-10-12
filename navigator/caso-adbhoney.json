@@ -1,0 +1,124 @@
+{
+  "versions": {
+    "attack": "19",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "legendItems": [
+    {
+      "label": "Observado · confianza alta",
+      "color": "#f97316"
+    },
+    {
+      "label": "Observado · confianza media",
+      "color": "#fdba74"
+    },
+    {
+      "label": "Observado · confianza baja",
+      "color": "#fde68a"
+    },
+    {
+      "label": "Capacidad (no ocurrió)",
+      "color": "#a78bfa"
+    }
+  ],
+  "name": "Caso 1 - Adbhoney: minero com.ufo.miner",
+  "description": "IP-ADB-01 · 26/09/2026 · gusano que instala dos mineros por ADB expuesto (TCP/5555)",
+  "techniques": [
+    {
+      "techniqueID": "T1133",
+      "color": "#fdba74",
+      "comment": "ADB-01 · Observado · ADB expuesto sin autenticación",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "initial-access"
+    },
+    {
+      "techniqueID": "T1518",
+      "color": "#f97316",
+      "comment": "ADB-02 · Observado · pm path com.ufo.miner",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1057",
+      "color": "#f97316",
+      "comment": "ADB-06 · Observado · ps | grep trinity",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1105",
+      "color": "#f97316",
+      "comment": "ADB-03 · Observado · subida de ufo.apk y 3 binarios por ADB",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1059.004",
+      "color": "#fdba74",
+      "comment": "ADB-04 · Observado · pm install, am start, nohup … trinity",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1070.004",
+      "color": "#f97316",
+      "comment": "ADB-05 · Observado · Stealth · rm -f del APK (alta) y rm -rf de la carpeta (baja)",
+      "enabled": true,
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1222",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1222.002",
+      "color": "#fdba74",
+      "comment": "ADB-07 · Observado · Defense Impairment · chmod 0755 a nohup y trinity",
+      "enabled": true,
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1496",
+      "color": "#a78bfa",
+      "comment": "ADB-08 · Capacidad · confianza alta · minería (VirusTotal: adbminer/coinhive)",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "impact"
+    }
+  ]
+}

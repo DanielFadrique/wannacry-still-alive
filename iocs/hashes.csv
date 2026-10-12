@@ -1,0 +1,4 @@
+sha256,md5,tipo,familia,honeypot,deteccion_virustotal,fecha_periodo
+c05e2dab77349cd639aa837e7e121710b8a0718d8fc93fb4cc6458ae90e5c597,ae12bb54af31227017feffd9598a6f5e,DLL Windows,"WannaCry (ransomware y gusano, MS17-010)",Dionaea,67/71,2026-09-26/2026-10-03
+0d3c687ffc30e185b836b99bd07fa2b0d460a090626f6bbbd40a95b98ea70257,,APK Android,"App maliciosa com.ufo.miner (minero)",Adbhoney,49/68,2026-09-26/2026-10-03
+71ecfb7bbc015b2b192c05f726468b6f08fcc804c093c718b950e688cc414af5,,ELF ARM,"Gusano de minería que se propaga por ADB",Adbhoney,39/64,2026-09-26/2026-10-03

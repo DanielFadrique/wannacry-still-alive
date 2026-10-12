@@ -1,0 +1,58 @@
+{
+  "versions": {
+    "attack": "19",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "legendItems": [
+    {
+      "label": "Capacidad (no ocurrió)",
+      "color": "#a78bfa"
+    }
+  ],
+  "name": "Honeypot T-Pot - Capacidad",
+  "description": "Capacidades del malware capturado que no ocurrieron (los honeypots no ejecutan las muestras).",
+  "techniques": [
+    {
+      "techniqueID": "T1496",
+      "color": "#a78bfa",
+      "comment": "ADB-08 · Capacidad · confianza alta · minería (VirusTotal: adbminer/coinhive)",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1486",
+      "color": "#a78bfa",
+      "comment": "DIO-04 · Capacidad · confianza alta · cifrado de ficheros",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1210",
+      "color": "#a78bfa",
+      "comment": "DIO-05 · Capacidad · confianza media · propagación como gusano por SMB",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "lateral-movement"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "versions": {
+    "attack": "19",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "legendItems": [
+    {
+      "label": "Observado · confianza alta",
+      "color": "#f97316"
+    },
+    {
+      "label": "Observado · confianza media",
+      "color": "#fdba74"
+    },
+    {
+      "label": "Observado · confianza baja",
+      "color": "#fde68a"
+    },
+    {
+      "label": "Capacidad (no ocurrió)",
+      "color": "#a78bfa"
+    }
+  ],
+  "name": "Caso 2 - Dionaea: WannaCry",
+  "description": "IP-DIO-01 · 03/10/2026 · equipo infectado que explota MS17-010 y entrega WannaCry",
+  "techniques": [
+    {
+      "techniqueID": "T1595",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "reconnaissance"
+    },
+    {
+      "techniqueID": "T1595.002",
+      "color": "#fdba74",
+      "comment": "DIO-01 · Observado · comprobación de SMBv1, sesión anónima e IPC$",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "reconnaissance"
+    },
+    {
+      "techniqueID": "T1190",
+      "color": "#f97316",
+      "comment": "DIO-02 · Observado · explotación de MS17-010 (EternalBlue)",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "initial-access"
+    },
+    {
+      "techniqueID": "T1105",
+      "color": "#f97316",
+      "comment": "DIO-03 · Observado · entrega de la DLL de WannaCry (5,59 MB)",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T1486",
+      "color": "#a78bfa",
+      "comment": "DIO-04 · Capacidad · confianza alta · cifrado de ficheros",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1210",
+      "color": "#a78bfa",
+      "comment": "DIO-05 · Capacidad · confianza media · propagación como gusano por SMB",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "lateral-movement"
+    }
+  ]
+}

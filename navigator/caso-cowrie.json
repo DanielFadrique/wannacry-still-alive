@@ -1,0 +1,108 @@
+{
+  "versions": {
+    "attack": "19",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false,
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "legendItems": [
+    {
+      "label": "Observado · confianza alta",
+      "color": "#f97316"
+    },
+    {
+      "label": "Observado · confianza media",
+      "color": "#fdba74"
+    },
+    {
+      "label": "Observado · confianza baja",
+      "color": "#fde68a"
+    },
+    {
+      "label": "Capacidad (no ocurrió)",
+      "color": "#a78bfa"
+    }
+  ],
+  "name": "Caso 3 - Cowrie: botnet IoT tipo Mirai",
+  "description": "IP-COW-01 · 27/09/2026 · bot que entra por Telnet con credenciales de fábrica",
+  "techniques": [
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "credential-access"
+    },
+    {
+      "techniqueID": "T1110.001",
+      "color": "#f97316",
+      "comment": "COW-01 · Observado · fuerza bruta Telnet con credenciales de routers",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "credential-access"
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "initial-access"
+    },
+    {
+      "techniqueID": "T1078.001",
+      "color": "#f97316",
+      "comment": "COW-02 · Observado · acceso con credenciales de fábrica",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "initial-access"
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1059.004",
+      "color": "#f97316",
+      "comment": "COW-03 · Observado · escape de la consola del router y comandos de shell",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1083",
+      "color": "#fdba74",
+      "comment": "COW-04 · Observado · búsqueda de carpetas con escritura (.x)",
+      "enabled": true,
+      "showSubtechniques": false,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1497",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1497.001",
+      "color": "#fde68a",
+      "comment": "COW-05 · Observado (comando) / Hipótesis (intención) · Stealth y Discovery · busybox echo con palabra aleatoria",
+      "enabled": true,
+      "showSubtechniques": false
+    }
+  ]
+}
