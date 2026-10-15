@@ -59,7 +59,7 @@ Capas interactivas en ATT&CK Navigator: [Observado](https://mitre-attack.github.
 
 **Daniel Fadrique** · SOC Analyst
 
-[LinkedIn](https://www.linkedin.com/in/TU_PERFIL) · [GitHub](https://github.com/DanielFadrique)
+[LinkedIn](https://www.linkedin.com/in/danielfadriqueesteban) · [GitHub](https://github.com/DanielFadrique)
 
 Certificación BTL1
 
